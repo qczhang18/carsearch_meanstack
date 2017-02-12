@@ -11,6 +11,7 @@ var users = require('./routes/users');
 //modification i did
 var mongoose = require('mongoose');
 var setupController = require('./controllers/setupController');
+var apiController = require('./controllers/apiController');
 var config = require('./config');
 
 var app = express();
@@ -18,7 +19,7 @@ var app = express();
 
 //qq stuff
 mongoose.connect(config.getDbConnectionString());
-setupController(app);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,6 +35,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
+
+
+
+//qq stuff again
+setupController(app);
+apiController(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
