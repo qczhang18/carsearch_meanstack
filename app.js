@@ -8,7 +8,17 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+//modification i did
+var mongoose = require('mongoose');
+var setupController = require('./controllers/setupController');
+var config = require('./config');
+
 var app = express();
+
+
+//qq stuff
+mongoose.connect(config.getDbConnectionString());
+setupController(app);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
