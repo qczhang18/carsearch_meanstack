@@ -9,7 +9,9 @@ import { CarService } from './car.service';
       <li *ngFor="let car of cars">
         {{car.make}} - {{car.model}}
       </li>
-    </ul>`,
+    </ul>
+    <search> search </search>
+    `,
   providers: [ CarService ]
 })
 export class AppComponent  { 

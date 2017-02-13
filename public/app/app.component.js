@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var car_service_1 = require('./car.service');
+var core_1 = require("@angular/core");
+var car_service_1 = require("./car.service");
 var AppComponent = (function () {
     function AppComponent(carService) {
         this.carService = carService;
@@ -21,15 +21,15 @@ var AppComponent = (function () {
     AppComponent.prototype.ngOnInit = function () {
         this.getCars();
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "<h1>Car List</h1>\n  <ul>\n      <li *ngFor=\"let car of cars\">\n        {{car.make}} - {{car.model}}\n      </li>\n    </ul>",
-            providers: [car_service_1.CarService]
-        }), 
-        __metadata('design:paramtypes', [car_service_1.CarService])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: "<h1>Car List</h1>\n  <ul>\n      <li *ngFor=\"let car of cars\">\n        {{car.make}} - {{car.model}}\n      </li>\n    </ul>\n    <search> search </search>\n    ",
+        providers: [car_service_1.CarService]
+    }),
+    __metadata("design:paramtypes", [car_service_1.CarService])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
