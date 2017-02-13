@@ -26,7 +26,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n          <header class=\"row\">\n            <nav class=\"col-md-8 col-md-offset-2\">\n              <ul class=\"nav nav-pills\">\n                <li> stuff </li>\n              </ul>\n            </nav>\n          </header>\n         <h1>Car List</h1>\n           <search> search </search>\n         ",
+        template: "\n           <search> </search>\n         ",
         providers: [car_service_1.CarService]
     }),
     __metadata("design:paramtypes", [car_service_1.CarService])

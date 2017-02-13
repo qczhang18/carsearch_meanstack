@@ -5,15 +5,7 @@ import { CarService } from './car.service';
 @Component({
   selector: 'my-app',
   template: `
-          <header class="row">
-            <nav class="col-md-8 col-md-offset-2">
-              <ul class="nav nav-pills">
-                <li> stuff </li>
-              </ul>
-            </nav>
-          </header>
-         <h1>Car List</h1>
-           <search> search </search>
+           <search> </search>
          `,
   providers: [ CarService ]
 })
