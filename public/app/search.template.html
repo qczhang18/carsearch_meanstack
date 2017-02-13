@@ -4,7 +4,11 @@
 <input name="search" #searchTerm> 
 <button (click)="performSearch(searchTerm)">Search</button> 
 <br> 
-<div *ngFor="let g of giphies"> 
-    <img src="{{g.images.original.url}}">
+<div *ngFor="let g of giphies">
+    <h5> Car Details </h5>
+    <h6> Make - {{g.make}} </h6>
+    <h6> Model - {{g.model}} </h6>
+    <h6> Miles - {{g.miles}} </h6>
+    <img src="{{g.images}}"> 
     <hr> 
 </div>

@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule }    from '@angular/http';
 
 import { AppComponent }  from './app.component';
-// import { SearchComponent } from './search.component';
+import { SearchComponent } from './search.component';
 
 @NgModule({
   imports:      [ BrowserModule,
                   HttpModule ],
   declarations: [ AppComponent,
-                ],
+                SearchComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

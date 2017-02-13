@@ -9,7 +9,7 @@ import { Http, Response } from '@angular/http';
 })
 
 export class SearchComponent {
-  link = 'https://qczhang18-carsearch.herokuapp.com/api/car/';
+  link = '/api/car/';
   http: Http;
   giphies = [];
 
@@ -25,7 +25,7 @@ export class SearchComponent {
 
     this.http.request(apiLink)
         .subscribe((res: Response) => {
-            this.giphies = res.json().data;
+            this.giphies = res.json();
             console.log(res.json());
         });
    }
