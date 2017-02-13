@@ -14,7 +14,7 @@ var SearchComponent = (function () {
     //  https://qczhang18-carsearch.herokuapp.com/api/car/ 
     function SearchComponent(http) {
         this.link = '/api/car/';
-        this.giphies = [];
+        this.cars = [];
         this.http = http;
     }
     SearchComponent.prototype.performSearch = function (searchTerm) {
@@ -23,7 +23,7 @@ var SearchComponent = (function () {
         var apiLink = this.link + searchTerm.value;
         this.http.request(apiLink)
             .subscribe(function (res) {
-            _this.giphies = res.json();
+            _this.cars = res.json();
             console.log(res.json());
         });
     };

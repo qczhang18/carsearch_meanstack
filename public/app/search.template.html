@@ -1,14 +1,14 @@
 <h1> Search Component html firing </h1>
 <h1> {{title}} </h1> 
 
-<input name="search" #searchTerm> 
+<input name="search" #searchTerm (keyup.enter)="performSearch(searchTerm)">
 <button (click)="performSearch(searchTerm)">Search</button> 
 <br> 
-<div *ngFor="let g of giphies">
+<div *ngFor="let c of cars">
     <h5> Car Details </h5>
-    <h6> Make - {{g.make}} </h6>
-    <h6> Model - {{g.model}} </h6>
-    <h6> Miles - {{g.miles}} </h6>
-    <img src="{{g.images}}"> 
+    <h6> Make - {{c.make}} </h6>
+    <h6> Model - {{c.model}} </h6>
+    <h6> Miles - {{c.miles}} </h6>
+    <img src="{{c.image}}"> 
     <hr> 
 </div>
