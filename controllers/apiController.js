@@ -18,10 +18,10 @@ module.exports = function(app) {
 
     app.get('/api/car/:id', function(req, res) {
 
-       Todos.findById({ _id: req.params.id }, function(err, todo) {
+       Cars.findById({ _id: req.params.id }, function(err, car) {
            if (err) throw err;
 
-           res.send(todo);
+           res.send(car);
        });
 
     });
