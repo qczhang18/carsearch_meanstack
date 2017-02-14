@@ -6,33 +6,33 @@ module.exports = function(app) {
        var starterCars = [
            {
                zipcode: 30144,
-               make: 'Nissan',
-               model: '2014 Maxima',
-               miles: 32000,
+               make: 'Toyota',
+               model: '2014 Camry',
+               miles: 20800,
                image: 'http://www.placecage.com/200/200',
-               contact: 'John Doe'
+               contact: 'Jim Doe'
            },
            {
-               zipcode: 30144,
+               zipcode: 30096,
                make: 'Toyota',
                model: '2012 Camry',
-               miles: 54000,
+               miles: 54500,
                image: 'http://www.placecage.com/200/200',
-               contact: 'John Smith'
+               contact: 'John Jay'
            },
            {
-               zipcode: 30071,
+               zipcode: 30096,
                make: 'Honda',
                model: '2015 Accord',
-               miles: 28000,
+               miles: 21000,
                image: 'http://www.placecage.com/200/200',
                contact: 'Jane Doe'
            },
            {
                zipcode: 30022,
                make: 'Honda',
-               model: '2014 Accord',
-               miles: 38000,
+               model: '2016 Accord',
+               miles: 18000,
                image: 'http://www.placecage.com/200/200',
                contact: 'Emma Doe'
            }
