@@ -6,6 +6,18 @@ module.exports = function(app) {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
 
+
+    app.get('/api/car', function(req, res) {
+
+        Cars.find({}, function(err, cars) {
+            if (err) throw err;
+
+            res.send(cars);
+        });
+
+    });
+
+
     app.get('/api/car/:uname', function(req, res) {
 
         Cars.find({ zipcode: req.params.uname }, function(err, cars) {
